@@ -1,0 +1,52 @@
+body {
+    height: 250px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0px;
+    padding: 0;
+}
+
+#school {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+#img {
+    height: 150px;
+    width: 130px;
+}
+
+.box {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+address {
+    margin-top: 10px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+div {
+    border: 1px solid black;
+    margin: 0;
+}
+
+#box2 {
+    display: flex;
+    float: right;
+}

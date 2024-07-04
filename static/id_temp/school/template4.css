@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    background-color: #fce4ec;
+}
+
+.id-card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 0;
+}
+
+.photo-container {
+    margin: 10px 0;
+}
+
+#img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #e91e63;
+}
+
+.student-info {
+    padding: 0 20px;
+    text-align: left;
+}
+
+.student-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.student-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.qr-code {
+    margin: 10px 0;
+    font-family: 'Libre Barcode 128 Text', cursive;
+}
+
+.footer {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e91e63;
+}

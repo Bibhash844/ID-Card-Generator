@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    background-color: #e0f7fa;
+}
+
+.id-card {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 0 3px 0;
+}
+
+.card-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.photo-container {
+    margin: 20px;
+}
+
+#img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 2px solid #2196f3;
+}
+
+.student-info {
+    padding: 0 20px;
+    text-align: left;
+}
+
+.student-info h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.student-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.footer {
+    background-color: #2196f3;
+    height: 10px;
+    padding: 10px 0;
+}

@@ -315,3 +315,7 @@ footer h3{
     align-items: baseline;
     color: white;
 }
+
+#email:focus {
+    outline:0;
+}

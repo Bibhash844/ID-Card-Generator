@@ -1,5 +1,5 @@
 body {
-  background-color: #fdfcf1;
+  background-color: #fff1e7;
   margin: 0;
   padding: 0;
   display: flex;
@@ -16,13 +16,13 @@ img {
 .login-form {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  border: 1px solid #faebd7;
-  box-shadow: 0 0 50px #faebd7;
+  border-radius: 20px;
   margin: 0;
   padding: 50px 50px 50px 50px;
-  background-color: antiquewhite;
+  background-color: white;
   align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form_ {
@@ -44,30 +44,30 @@ input {
   background-color: transparent;
 }
 
-#username {
-  background: url(/user.png) no-repeat scroll left;
+#email {
+  background: url(/images/user.png) no-repeat scroll left;
   padding-left: 20px;
   background-size: 14px;
 }
 
 #password {
-  background: url(/lock.png) no-repeat scroll left;
+  background: url(/images/lock.png) no-repeat scroll left;
   padding-left: 20px;
   background-size: 14px;
 }
 
 hr {
   width: 300px;
-  border: 1px solid white;
+  border: 1px solid black;
   margin-top: 0;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 100px 100px;
 }
 
 input::placeholder {
   color: black;
 }
 
-input[type="text"],
+input[type="email"],
 input[type="password"] {
   outline: none;
 }
@@ -82,12 +82,13 @@ button {
   border-radius: 30px;
   margin-bottom: 30px;
   font-size: 14px;
+  background-color: rgb(192, 190, 190);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-  background-color: rgb(65, 64, 64);
-  color: white;
+  background-color: rgb(73, 73, 73);
+  color: rgb(0, 0, 0);
   cursor: pointer;
 }
 
@@ -95,4 +96,11 @@ a {
   text-decoration: none;
   color: black;
   font-size: 13px;
+  margin: 0;
+  margin-top: 5px;
+}
+
+#sign {
+  font-size: 16px;
+  font-weight: bold;
 }

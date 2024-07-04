@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin: 0;
+    background-color: #fce4ec;
+}
+
+.id-card {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.header {
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 0 3px 0;
+}
+
+.photo-container {
+    margin: 20px 0;
+}
+
+#img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #e91e63;
+}
+
+.student-info {
+    padding: 0 20px;
+}
+
+.student-info h3, .student-info p {
+    margin: 5px 0;
+}
+
+.footer {
+    margin-top: 20px;
+}

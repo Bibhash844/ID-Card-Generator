@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./template1.css">
+    <title>template1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body id="container">
+    <div id="school">
+        <h2>XYZ School</h2>
+    </div>
+    <div class="container" >
+        <div class="box">
+            <button id="generateImageButton">
+                <img src="/static/images/img.jpg" id="img" alt="profile">
+            </button>
+            <address>patel chowk, ward no. 3 bhabua 821101</address>
+        </div>
+        <div class="box" id="box2">
+            <h2>Bibhash</h2>
+            <h3>Class X-B</h3>
+            <h3>Blood Group: O<sup>+</sup></h3>
+            <h3>999999999</h3>
+        </div>
+    </div>
+    <script>
+        // Capture specific div to image and download automatically
+        function captureDiv() {
+            const captureElement = document.querySelector('#container');
+            
+            // Get dimensions of the div
+            const rect = captureElement.getBoundingClientRect();
+            const width = rect.width;
+            const height = rect.height;
+
+            html2canvas(captureElement, {
+                width: width,
+                height: height,
+                windowWidth: width,
+                windowHeight: height,
+                scrollX: -window.scrollX,
+                scrollY: -window.scrollY
+            }).then(canvas => {
+                // Create image URL from canvas
+                const image = canvas.toDataURL('image/png');
+                
+                // Create a hidden anchor element
+                const a = document.createElement('a');
+                a.setAttribute('download', 'temp1.png'); // Set the filename
+                a.setAttribute('href', image); // Set the image URL
+                document.body.appendChild(a); // Append to body
+                
+                // Programmatically click the anchor to trigger the download
+                a.click();
+                
+                // Remove the anchor from the document
+                document.body.removeChild(a);
+            });
+        }
+
+        // Add event listener to the button
+        const btn = document.querySelector('#generateImageButton');
+        btn.addEventListener('click', captureDiv);
+    </script>
+</body>
+</html>

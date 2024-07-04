@@ -1,0 +1,161 @@
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0;
+    display: inline-flex;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/*  Aside----Nav_bar */
+aside {
+    width: 25vw;
+    background-color: #cbe5e8;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+aside div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside h2 {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+aside #title hr {
+    border: 1px solid black;
+    width: 22vw;
+    margin-top: 5px;
+}
+
+aside #log {
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: 17px;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+    margin-top: 0;
+}
+
+aside #lists {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 10px;
+    width: 20vw;
+    height: 60vh;
+}
+
+#log hr {
+    border: 1px solid black;
+    width: 22vw;
+    margin-bottom: 2px;
+}
+
+aside #lists h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    margin-left: 10px;
+}
+
+#lists div {
+    width: 17.5vw;
+    background-color: aquamarine;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+
+/* Main_Section */
+main {
+    background-color: #fff1e7;
+    width: 75vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+.block {
+    display: none;
+}
+
+#temps {
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#temps h1{
+    margin: 50px;
+}
+
+#imageContainer {
+    display: grid;
+    width: 75vw;
+    grid-template-columns: 50% 50%;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+#temps img {
+    margin: 20px;
+}
+
+#landscape {
+    width: 380px;
+}
+
+#portrat {
+    width: 260px;
+}
+
+#imageContainer lable {
+    cursor: pointer;
+}
+
+.image-container input[type="radio"] {
+    display: none;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-container input[type="radio"]:checked + img {
+    border-radius: 10px;
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    transform: scale(1.02);
+}
+
+#imgInfo {
+    display: none; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#temps input[type="button"]{
+    margin: 40px;
+}

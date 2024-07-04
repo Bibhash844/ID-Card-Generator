@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./template2.css" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <title>Student ID Card Template 3</title>
+  </head>
+  <body id="body">
+    <div class="id-card">
+      <div class="header">
+        <h2>Sunshine Academy</h2>
+        <p>789 Education Lane, City, ZIP</p>
+      </div>
+      <div class="photo-container">
+        <img src="/static/images/img.jpg" id="img" alt="profile" />
+      </div>
+      <div class="student-info">
+        <h3>Name: John-- Smith</h3>
+        <p>Grade: 9</p>
+        <p>Blood Group: B<sup>-</sup></p>
+        <p>Date of Birth: 03/03/2007</p>
+        <p>Contact: 7777777777</p>
+        <p>ID Number: 1122334455</p>
+      </div>
+    </div>
+
+    <script>
+      function captureDiv() {
+        const captureElement = document.querySelector(".id-card");
+        var border = window.getComputedStyle(captureElement).borderRadius;
+        border = +border.slice(0,2);
+        // Get dimensions of the div
+        const rect = captureElement.getBoundingClientRect();
+        const width = rect.width;
+        const height = rect.height;
+        const borderRadius = border;
+        const scale = 2;
+
+        html2canvas(captureElement, {
+          scale: scale,
+          scrollX: -window.scrollX,
+          scrollY: -window.scrollY,
+        }).then((canvas) => {
+          const roundedCanvas = document.createElement("canvas");
+          roundedCanvas.width = width * scale;
+          roundedCanvas.height = height * scale;
+          const context = roundedCanvas.getContext("2d");
+
+          context.beginPath();
+          context.moveTo(borderRadius * scale, 0);
+          context.lineTo((width - borderRadius) * scale, 0);
+          context.quadraticCurveTo(
+            width * scale,
+            0,
+            width * scale,
+            borderRadius * scale
+          );
+          context.lineTo(width * scale, (height - borderRadius) * scale);
+          context.quadraticCurveTo(
+            width * scale,
+            height * scale,
+            (width - borderRadius) * scale,
+            height * scale
+          );
+          context.lineTo(borderRadius * scale, height * scale);
+          context.quadraticCurveTo(
+            0,
+            height * scale,
+            0,
+            (height - borderRadius) * scale
+          );
+          context.lineTo(0, borderRadius * scale);
+          context.quadraticCurveTo(0, 0, borderRadius * scale, 0);
+          context.closePath();
+          context.clip();
+
+          context.drawImage(
+            canvas,
+            0,
+            0,
+            canvas.width,
+            canvas.height,
+            0,
+            0,
+            roundedCanvas.width,
+            roundedCanvas.height
+          );
+
+
+          const image = roundedCanvas.toDataURL("image/png");
+          const a = document.createElement("a");
+          a.setAttribute("download", "temp2.png");
+          a.setAttribute("href", image);
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        });
+      }
+      window.onload = captureDiv();
+    </script>
+  </body>
+</html>

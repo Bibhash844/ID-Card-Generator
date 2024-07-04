@@ -1,0 +1,14 @@
+      var element = document.getElementById('body');
+      const w = document.querySelector(".id-card").offsetWidth;
+      const h = document.querySelector(".id-card").offsetHeight;
+      var opt = {
+          margin:       1,
+          filename:     'student_id_card_3.pdf',
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2 },
+          jsPDF:        { unit: 'px', format: [w, h], orientation: 'portrait' }
+      };
+
+      document.getElementById('generatePdfButton').addEventListener('click', function(){
+          html2pdf().set(opt).from(element).save();
+      });

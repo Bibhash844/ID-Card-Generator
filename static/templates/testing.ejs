@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+    <p>Check the console for the data.</p>
+
+    <script>
+        // Embed the data as a JavaScript variable without escaping it
+        const temps = <%- JSON.stringify(temps) %>;
+        console.log("temps =>", temps);
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+    <aside>
+        <div id="title">
+            <h2>ID Card Generator</h2>
+            <hr>
+        </div>
+        <div id="lists">
+            <div><h3>Choose Template</h3></div>
+            <div><h3>Data Entry</h3></div>
+            <div><h3>Preview</h3></div>
+            <div><h3>Payment</h3></div>
+        </div>
+        <div id="log">
+            <hr>
+            <a href="/">Logout</a>
+        </div>
+    </aside>
+    <main>
+
+        <!-- choose template -->
+        <div class="block" id="temps">
+            <h1>Choose a Template</h1>
+            <div id="imageContainer" class="image-container">
+                <div id="imgInfo">hello</div>
+            </div>
+            <input type="button" value="Confirm">
+        </div>
+
+        <!-- file entry, number of cards required and pricing -->
+        <div class="block" id="filesEntry">
+            <input type="number" name="cardNumber" placeholder="How Many Number of Card You Require">
+            <p>cost: </p>
+            <input type="file" accept=".xlsx, .xls" required>
+            <input type="button" value="Confirm">
+        </div>
+
+        <!-- preview block -->
+        <div class="block" id="previewBlock">
+            <div id="preview"></div>
+            <input type="button" value="Change Template">
+            <input type="button" value="Confirm">
+        </div>
+
+        <!-- payment section -->
+        <div class="block" id="payment">
+            <h1>Payment Amount: $10.99</h1>
+            <input type="button" placeholder="Pay" name="Pay" value="Pay">
+        </div>
+        <script src="/js/dashboard.js"></script>
+    </main>
+</body>
+</html>
